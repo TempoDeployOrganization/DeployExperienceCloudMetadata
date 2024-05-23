@@ -23,7 +23,7 @@
     <redirectToCustomDomain>false</redirectToCustomDomain>
     <referrerPolicyOriginWhenCrossOrigin>true</referrerPolicyOriginWhenCrossOrigin>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
-    
-    
+    <siteAdmin>gsdevopsteamdev@gmail.com</siteAdmin>
+    <siteGuestRecordDefaultOwner>gsdevopsteamdev@gmail.com</siteGuestRecordDefaultOwner>
     <siteType>ChatterNetwork</siteType>
 </CustomSite>
