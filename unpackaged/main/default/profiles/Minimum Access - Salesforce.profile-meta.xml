@@ -115,7 +115,6 @@
         <default>false</default>
         <visible>true</visible>
     </applicationVisibilities>
-    <custom>false</custom>
     <layoutAssignments>
         <layout>AsyncOperationLog-Async Operation Log Layout</layout>
     </layoutAssignments>
@@ -801,5 +800,24 @@
         <tab>standard-report</tab>
         <visibility>Hidden</visibility>
     </tabVisibilities>
-    <userLicense>Salesforce</userLicense>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ActivitiesAccess</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>AllowViewKnowledge</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ChatterInternalUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>LightningConsoleAllowedForUser</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewHelpLink</name>
+    </userPermissions>
 </Profile>
