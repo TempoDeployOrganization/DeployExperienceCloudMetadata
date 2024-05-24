@@ -1,0 +1,92 @@
+{
+  "appPageId" : "01b1e4b5-277d-4623-97aa-ad869891b16f",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "a34c84d8-2837-4100-8390-5533a46fd4a0",
+  "label" : "POC Apex Page",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "99682e4d-b90f-4a9b-8b99-c4aca7c22509",
+          "columns" : [ {
+            "UUID" : "716fc81c-53ee-4713-92d0-9fac46108821",
+            "columnKey" : "1",
+            "columnName" : "Column 1",
+            "columnWidth" : "12",
+            "seedComponents" : [ ]
+          } ]
+        },
+        "sectionHeight" : 300
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "99682e4d-b90f-4a9b-8b99-c4aca7c22509",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "richTextValue" : "<p>Experience Cloud Showcase test</p>"
+          },
+          "componentName" : "forceCommunity:richTextInline",
+          "id" : "d81f61be-58ee-4729-8b08-dc828252543e",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "height" : "300",
+            "pageName" : "AccountControllerPage",
+            "recordId" : "{!recordId}"
+          },
+          "componentName" : "forceCommunity:visualforcePage",
+          "id" : "55c4598b-9bb4-4340-9fcc-9bee9f9cfd72",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        }, {
+          "componentAttributes" : {
+            "showCreateNewCalendar" : false,
+            "showOtherCalendars" : false,
+            "showSidebar" : true
+          },
+          "componentName" : "forceCommunity:calendar",
+          "id" : "bc738550-c924-4833-a254-1bb98c25142e",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "716fc81c-53ee-4713-92d0-9fac46108821",
+        "regionLabel" : "Column 1",
+        "regionName" : "1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "ccc7adba-54dd-4438-a6f7-304a7bcb1fa8",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "POC Apex Page"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "e6aaa993-375a-4e5b-87b2-5765505e00f6",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "f0be212a-37ea-4260-bf52-9526a4c288ed",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-poc-apex-page"
+}
