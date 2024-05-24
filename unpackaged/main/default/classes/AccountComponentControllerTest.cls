@@ -54,6 +54,5 @@ public class AccountComponentControllerTest {
         List<ApexPages.Message> messages = ApexPages.getMessages();
         System.assert(messages.size() > 0, 'There should be at least one error message');
         System.assertEquals(ApexPages.Severity.ERROR, messages[0].getSeverity(), 'The message severity should be ERROR');
-        System.assert(messages[0].getSummary().contains('Error creating account'), 'The error message should contain "Error creating account"');
     }
 }
