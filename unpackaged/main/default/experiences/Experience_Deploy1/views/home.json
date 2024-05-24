@@ -101,6 +101,16 @@
     "regionName" : "sidebar",
     "type" : "region"
   }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<p>Replace this text with content of your own.</p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "344146b6-0efa-46cb-bcb3-f9c321f7f222",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
     "id" : "cc55e988-7a12-46c3-ac1f-744a3fd9ccab",
     "regionName" : "footer",
     "type" : "region"
