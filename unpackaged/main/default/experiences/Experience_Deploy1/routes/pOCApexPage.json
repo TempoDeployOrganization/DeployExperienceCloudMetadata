@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "a34c84d8-2837-4100-8390-5533a46fd4a0",
+  "appPageId" : "01b1e4b5-277d-4623-97aa-ad869891b16f",
+  "configurationTags" : [ ],
+  "devName" : "POC_Apex_Page__c",
+  "id" : "4831e1bf-324b-4ae9-af8e-a120e9e22dbc",
+  "label" : "POC Apex Page",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-poc-apex-page",
+  "type" : "route",
+  "urlPrefix" : "poc-apex-page"
+}
