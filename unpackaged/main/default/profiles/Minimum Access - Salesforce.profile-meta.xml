@@ -893,6 +893,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>PartnerMarketingBudget.Description</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>ReturnOrder.DestinationLocationId</field>
         <readable>true</readable>
     </fieldPermissions>

@@ -11,12 +11,8 @@
                 <value>True</value>
             </criteriaItems>
             <escalationAction>
-                <assignedTo>gsdevopsteamdev@gmail.com</assignedTo>
-                <assignedToType>User</assignedToType>
                 <minutesToEscalation>600</minutesToEscalation>
                 <notifyCaseOwner>false</notifyCaseOwner>
-                <notifyTo>gsdevopsteamdev@gmail.com</notifyTo>
-                <notifyToTemplate>unfiled$public/SupportCaseAssignmentNotification</notifyToTemplate>
             </escalationAction>
             <escalationStartTime>CaseCreation</escalationStartTime>
         </ruleEntry>
