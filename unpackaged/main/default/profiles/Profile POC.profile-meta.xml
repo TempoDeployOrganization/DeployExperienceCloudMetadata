@@ -968,4 +968,7 @@
         <enabled>true</enabled>
         <name>WorkCalibrationUser</name>
     </userPermissions>
+    <layoutAssignments>
+        <layout>POC_Gearset_Deploy__mdt-POC Gearset Deploy Layout</layout>
+    </layoutAssignments>
 </Profile>
