@@ -1,6 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>POC_Cancel</name>
+        <label>POC Cancel</label>
+        <locationX>314</locationX>
+        <locationY>350</locationY>
+        <actionName>cancelAppointment</actionName>
+        <actionType>cancelAppointment</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>POC</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>cancelStatus</name>
+            <value>
+                <elementReference>POC_Txt</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>cancelAppointment</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>POC_True_Appointment</name>
+        <label>POC True Appointment</label>
+        <locationX>50</locationX>
+        <locationY>350</locationY>
+        <actionName>saveAppointment</actionName>
+        <actionType>saveAppointment</actionType>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <nameSegment>saveAppointment</nameSegment>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+        <versionSegment>1</versionSegment>
+    </actionCalls>
     <apiVersion>60.0</apiVersion>
+    <decisions>
+        <name>POC_Decision</name>
+        <label>POC Decision</label>
+        <locationX>182</locationX>
+        <locationY>242</locationY>
+        <defaultConnector>
+            <targetReference>POC_Cancel</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>POC FALSE</defaultConnectorLabel>
+        <rules>
+            <name>POC_True</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <operator>None</operator>
+            </conditions>
+            <connector>
+                <targetReference>POC_True_Appointment</targetReference>
+            </connector>
+            <label>POC True</label>
+        </rules>
+    </decisions>
     <environments>Default</environments>
     <interviewLabel>POC Flow {!$Flow.CurrentDateTime}</interviewLabel>
     <label>POC Flow</label>
@@ -26,19 +83,14 @@
     <screens>
         <name>POC_Screen</name>
         <label>POC Screen</label>
-        <locationX>176</locationX>
+        <locationX>182</locationX>
         <locationY>134</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
-        <fields>
-            <name>POC_Flag</name>
-            <dataType>Boolean</dataType>
-            <fieldText>POC Flag</fieldText>
-            <fieldType>InputField</fieldType>
-            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
-            <isRequired>true</isRequired>
-        </fields>
+        <connector>
+            <targetReference>POC_Decision</targetReference>
+        </connector>
         <fields>
             <name>POC_Txt</name>
             <dataType>String</dataType>
@@ -47,15 +99,45 @@
             <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
             <isRequired>false</isRequired>
         </fields>
+        <fields>
+            <name>POC_Image</name>
+            <extensionName>flowruntime:image</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>imageName</name>
+                <value>
+                    <elementReference>POC_Image.horizontalAlignment</elementReference>
+                </value>
+            </inputParameters>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>true</isRequired>
+            <storeOutputAutomatically>true</storeOutputAutomatically>
+        </fields>
+        <fields>
+            <name>POC_Date</name>
+            <dataType>Date</dataType>
+            <fieldText>POC Date</fieldText>
+            <fieldType>InputField</fieldType>
+            <inputsOnNextNavToAssocScrn>UseStoredValues</inputsOnNextNavToAssocScrn>
+            <isRequired>false</isRequired>
+        </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>50</locationX>
+        <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>POC_Screen</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>InvalidDraft</status>
+    <variables>
+        <name>POC</name>
+        <dataType>Currency</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+    </variables>
 </Flow>
