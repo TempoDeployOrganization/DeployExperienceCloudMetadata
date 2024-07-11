@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DigitalExperienceConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>KT Session Digital Experience Bundle</label>
+    <site>
+        <urlPathPrefix>DigitalExperienceCiandt</urlPathPrefix>
+    </site>
+    <space>site/KT_Session_Digital_Experience_Bundle1</space>
+</DigitalExperienceConfig>
