@@ -1,0 +1,7 @@
+{
+  "type" : "sfdc_cms__site",
+  "title" : "KT Session Digital Experience Bundle",
+  "contentBody" : {
+    "authenticationType" : "AUTHENTICATED"
+  }
+}
